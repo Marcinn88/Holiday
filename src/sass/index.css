@@ -153,7 +153,27 @@
 }
 
 .timer__value {
-  color: black;
+  color: rgb(81, 177, 255);
+  -webkit-text-stroke: 0.5px black;
+  font-family: "Mansalva", cursive;
+}
+@media (min-width: 305px) {
+  .timer__value {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 450px) {
+  .timer__value {
+    font-size: 25px;
+    line-height: 25px;
+  }
+}
+@media (min-width: 630px) {
+  .timer__value {
+    font-size: 35px;
+    line-height: 35px;
+  }
 }
 
 .weather__wrapper {

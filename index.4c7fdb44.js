@@ -1,0 +1,2 @@
+!function(){var e,a,r,n,o,t,s,i=document.querySelector(".timer__value"),d=document.querySelector(".timer__wrapper");o=new Date,t=new Date(1686285e6),e=t-o,a=6e4,n=24*(r=36e5),(s={days:Math.floor(e/n),hours:Math.floor(e%n/r),minutes:Math.floor(e%n%r/a),seconds:Math.floor(e%n%r%a/1e3)}).days>0?i.innerHTML=s.days:0==s.days?d.innerHTML="Hurra!! Dzisiaj jedziemy na wakacje!":s.days<0&&(d.innerHTML="Następne wakacje za rok.. ;)")}();
+//# sourceMappingURL=index.4c7fdb44.js.map

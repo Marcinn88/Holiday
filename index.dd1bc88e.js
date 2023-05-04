@@ -1,0 +1,2 @@
+const e=document.querySelector(".timer__value"),a=document.querySelector(".timer__wrapper");!function(){let n=new Date,r=function(e){const a=6e4,n=36e5,r=24*n;return{days:Math.floor(e/r),hours:Math.floor(e%r/n),minutes:Math.floor(e%r%n/a),seconds:Math.floor(e%r%n%a/1e3)}}(new Date(1686285e6)-n);r.days>0?e.innerHTML=r.days:0==r.days?a.innerHTML="Hurra!! Dzisiaj jedziemy na wakacje!":r.days<0&&(a.innerHTML="Następne wakacje za rok.. ;)")}();
+//# sourceMappingURL=index.dd1bc88e.js.map

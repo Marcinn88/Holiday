@@ -154,4 +154,114 @@
 
 .timer__value {
   color: black;
+}
+
+.weather__wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.weather__info-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5%;
+}
+
+.weather__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+}
+@media (min-width: 450px) {
+  .weather__title {
+    font-size: 20px;
+  }
+}
+@media (min-width: 630px) {
+  .weather__title {
+    font-size: 25px;
+  }
+}
+
+.weather__info {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherOne__ico,
+.weatherTwo__ico,
+.weatherThree__ico {
+  width: 50px;
+}
+@media (min-width: 450px) {
+  .weatherOne__ico,
+  .weatherTwo__ico,
+  .weatherThree__ico {
+    width: 75px;
+  }
+}
+@media (min-width: 630px) {
+  .weatherOne__ico,
+  .weatherTwo__ico,
+  .weatherThree__ico {
+    width: 100px;
+  }
+}
+@media (min-width: 900px) {
+  .weatherOne__ico,
+  .weatherTwo__ico,
+  .weatherThree__ico {
+    width: 120px;
+  }
+}
+
+.weatherOne__city,
+.weatherTwo__city,
+.weatherThree__city {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+}
+@media (min-width: 450px) {
+  .weatherOne__city,
+  .weatherTwo__city,
+  .weatherThree__city {
+    font-size: 15px;
+  }
+}
+@media (min-width: 630px) {
+  .weatherOne__city,
+  .weatherTwo__city,
+  .weatherThree__city {
+    font-size: 20px;
+  }
+}
+
+.weatherOne__temperature,
+.weatherTwo__temperature,
+.weatherThree__temperature {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+}
+@media (min-width: 450px) {
+  .weatherOne__temperature,
+  .weatherTwo__temperature,
+  .weatherThree__temperature {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+@media (min-width: 630px) {
+  .weatherOne__temperature,
+  .weatherTwo__temperature,
+  .weatherThree__temperature {
+    font-size: 80px;
+    line-height: 80px;
+  }
 }/*# sourceMappingURL=index.css.map */

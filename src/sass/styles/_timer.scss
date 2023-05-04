@@ -1,0 +1,30 @@
+.timer__wrapper{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    line-height: 10px;
+    gap:5px;
+    @media (min-width:305px) {
+        font-size: 15px;
+        line-height: 15px;
+        gap:15px;
+    }
+    @media (min-width:450px) {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    @media (min-width:630px) {
+        font-size: 30px;
+        line-height: 30px;
+        margin-top: 20px;
+    }
+}
+.timer__description{
+    color:rgb(61, 61, 61);
+}
+.timer__value{
+    color:black;
+}

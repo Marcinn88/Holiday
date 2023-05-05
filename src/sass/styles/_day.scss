@@ -9,6 +9,9 @@
     display: flex;
     & ul { list-style-type:none;}
 }
+.day__info{
+    width: 100%;
+}
 .day__list{
     display: flex;
     flex-wrap: wrap;
@@ -19,17 +22,26 @@
     gap: 30px;
     padding:0;
 }
+.day__list-element{
+    padding: 10px
+}
 .day__list-element-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    width: 400px;
+    width: 100%;
+    @media (min-width: 580px) {
+        width: 400px;
+    }
 }
 .day__list-element-img{
-    width: 400px;
+    width: 100%;
     border-radius: 10px;
+    @media (min-width: 580px) {
+        width: 400px;
+    }
 }
 .day__title{
     font-size: 30px;

@@ -1,0 +1,35 @@
+.atraction__wrapper{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    line-height: 10px;
+    gap:15px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+}
+.attraction__day-wrapper{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color: rgb(221, 235, 255);
+    padding: 20px;
+    border-radius: 5%;
+  & ul { list-style-type:square;
+    color:rgb(3, 19, 92)}
+}
+.attraction__day-title{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 0.5px rgb(66, 154, 255);
+}
+.attraction__list-title{
+    color:black;
+    font-weight: 600;
+}
+.attraction__list-description{
+    color:#454545;
+}

@@ -22,6 +22,11 @@
         line-height: 30px;
         margin-top: 50px;
     }
+    @media (min-width:900px) {
+        font-size: 40px;
+        line-height: 40px;
+        margin-top: 50px;
+    }
 }
 .timer__description{
     color:rgb(61, 61, 61);
@@ -41,5 +46,9 @@
     @media (min-width:630px) {
         font-size: 35px;
         line-height: 35px;
+    }
+    @media (min-width:900px) {
+        font-size: 45px;
+        line-height: 45px;
     }
 }

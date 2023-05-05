@@ -1,0 +1,16 @@
+.footer{
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    background-color: rgb(221, 235, 255);
+    border-radius: 15px 15px 0 0;
+    padding: 20px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+   }
+   .footer__copyrights{
+    & a{ text-decoration: none;
+        color: #505050;
+   }}

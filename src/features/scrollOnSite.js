@@ -1,4 +1,4 @@
-const dayOne = document.querySelector('#dayOneNav')
+const dayOne = document.querySelector('#dayOne')
 const dayOneDistance = dayOne.top
 const dayOneTarget = (dayOne.offsetTop)
 const attractionOneBtn = document.querySelector('#attraction-One');

@@ -12,7 +12,7 @@ const cityThree = 'Chania'
 
 //     window.scrollTo(attractionOneBtn.offsetLeft, attractionOneBtn.offsetTop);
 //   });
-const dayOne = document.querySelector('#dayOneNav')
+const dayOne = document.querySelector('#dayOne')
 const dayOneTarget = (dayOne.offsetTop)
 const attractionOneBtn = document.querySelector('#attraction-One');
 

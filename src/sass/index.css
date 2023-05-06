@@ -815,9 +815,30 @@ html {
   justify-content: center;
   align-items: center;
   width: 160px;
+  position: relative;
 }
 .modal__list-element:hover {
   cursor: pointer;
   background-color: rgb(93, 129, 212);
   color: #fff;
+}
+
+.checked {
+  background-color: rgb(214, 255, 214);
+  border-color: #456546;
+  color: #456546;
+}
+.checked::before {
+  content: "";
+  background-image: url("./../images/checked.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 25px;
+  opacity: 1;
+  display: block;
+  width: 25px;
+  height: 25px;
+  left: -12px;
+  top: -10px;
+  position: absolute;
 }/*# sourceMappingURL=index.css.map */

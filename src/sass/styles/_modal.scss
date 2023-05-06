@@ -1,5 +1,6 @@
 .main__modal-wrapper{
     position: relative;
+    font-family: 'Montserrat', sans-serif;
 }
 .main__modal-backdrop{
     width: 100%;
@@ -14,6 +15,8 @@
     position: fixed;
     width: 80%;
     height: 80%;
+    overflow-y:overlay;
+    overflow-x: hidden;
     top: 10%;
     left: 10%;
     z-index: 101;
@@ -21,6 +24,9 @@
     border-radius: 20px;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .is-hidden-modal{
@@ -31,17 +37,22 @@
     height: 0;
 }
 .X-modal{
-    top:-15px;
-    right:-15px;
-    position: absolute;
+    bottom:100px;
+    right:150px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color:white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid blue;
+    border: 1px solid rgb(183, 183, 255);
+    border-radius: 10px;
+    z-index: 102;
+    padding: 10px 35px;
+    font-size: 15px;
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(93, 129, 212);
+        color:#fff;
+    }
 }
 @keyframes close {
     0% {
@@ -59,25 +70,48 @@
 .modal__content-wrapper{
     display: flex;
     justify-content: center;
-    background-color: aqua;
+    // background-color: aqua;
 }
 .modal__day-list{
+    background-color: rgb(239, 248, 255);
     display: flex;
-    background-color: red;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 20px;
     gap: 30px;
     list-style-position: inside;
     list-style-type: none;
+    border: solid 1px rgb(128, 128, 255);
+    border-radius: 20px;
+}
+.modal__day__list-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal__list-title{
+    font-size: 18px;
 }
 .modal__list{
     list-style-position: inside;
     padding-left: 0;
-    background-color: blue;
+    // background-color: blue;
     list-style-type: none;
 }
 .modal__list-element{
-    background-color: green;
+    font-size: 12px;
+    background-color: #fff;
+    border: solid 1px rgb(201, 201, 255);
     border-radius: 15px;
     padding: 5px;
     margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(93, 129, 212);
+        color:#fff;
+    }
 }

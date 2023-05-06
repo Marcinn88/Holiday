@@ -1,7 +1,7 @@
 import simpleLightbox from "simplelightbox";
 import { countdown } from "./features/timer";
 import { checkWeatherOne, checkWeatherTwo, checkWeatherThree } from "./features/weather"
-import { scrollFunction } from "./features/scrollUp";
+import { scrollFunction, scrollFunctionMenu } from "./features/scrollUp";
 
 const cityOne = 'Agia Pelagia'
 const cityTwo = 'Heraklion'
@@ -13,6 +13,7 @@ checkWeatherOne(cityOne)
 checkWeatherTwo(cityTwo)
 checkWeatherThree(cityThree)
 scrollFunction()
+scrollFunctionMenu()
 
 const lightboxOne = new SimpleLightbox(".galleryOne a", {
     captionsData: "alt",

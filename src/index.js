@@ -2,13 +2,13 @@ import simpleLightbox from "simplelightbox";
 import { countdown } from "./features/timer";
 import { checkWeatherOne, checkWeatherTwo, checkWeatherThree } from "./features/weather"
 import { scrollFunction, scrollFunctionMenu, scrollFunctionMap } from "./features/scrollUp";
-import { closeBtn, mainModalWrapper,showBtn, closeFunction, openFunction, checkElement } from "./features/modal";
+import { checkElement } from "./features/modal";
 import { initializeApp } from "firebase/app";
 
 const mainModalWrapper = document.querySelector('.main__modal-wrapper')
 const closeBtn = document.querySelector('#closeModal');
 const showBtn = document.querySelector('#showModal')
-closeBtn.addEventListener('click', closeFunction =()=> {mainModalWrapper.classList.add('is-hidden-modal')});
+closeBtn.addEventListener('click', closeFunction = () => {mainModalWrapper.classList.add('is-hidden-modal')});
 showBtn.addEventListener('click', openFunction = () => {mainModalWrapper.classList.remove('is-hidden-modal')});
 
 // Your web app's Firebase configuration

@@ -5,7 +5,6 @@ export async function checkWeatherOne(city){
     try {
     const response = await fetch(apiUrl+`${apiKey}`+'&q='+ city +'&aqi=yes&days=2');
     const data = await response.json();
-    console.log(data);
     const siteIco = document.querySelector('.weatherOne__ico').src = data.current.condition.icon;
     const siteCity = document.querySelector('.weatherOne__city').innerHTML = city;
     const siteTemp = document.querySelector('.weatherOne__temperature').innerHTML = Math.round(data.current.temp_c);
@@ -17,7 +16,6 @@ export async function checkWeatherTwo(city){
     try {
     const response = await fetch(apiUrl+`${apiKey}`+'&q='+ city +'&aqi=yes&days=2');
     const data = await response.json();
-    console.log(data);
     const siteIco = document.querySelector('.weatherTwo__ico').src = data.current.condition.icon;
     const siteCity = document.querySelector('.weatherTwo__city').innerHTML = city;
     const siteTemp = document.querySelector('.weatherTwo__temperature').innerHTML = Math.round(data.current.temp_c);
@@ -29,7 +27,6 @@ export async function checkWeatherThree(city){
     try {
     const response = await fetch(apiUrl+`${apiKey}`+'&q='+ city +'&aqi=yes&days=2');
     const data = await response.json();
-    console.log(data);
     const siteIco = document.querySelector('.weatherThree__ico').src = data.current.condition.icon;
     const siteCity = document.querySelector('.weatherThree__city').innerHTML = city;
     const siteTemp = document.querySelector('.weatherThree__temperature').innerHTML = Math.round(data.current.temp_c);

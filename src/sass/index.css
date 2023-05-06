@@ -619,4 +619,25 @@
      object-fit: cover;
   transition: transform var(--animation-duration) var(--timing-function);
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+#myBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: white;
+  cursor: pointer;
+  border: solid 1px rgb(113, 152, 211);
+  border-radius: 15px;
+  width: 70px;
+  height: 70px;
+}
+
+#myBtn:hover {
+  border: solid 2px rgb(83, 112, 155);
+  box-shadow: 0px 1px 3px 0px rgba(160, 160, 160, 0.2), 0px 1px 1px 0px rgba(173, 173, 173, 0.14), 0px 2px 1px -1px rgba(175, 175, 175, 0.12);
 }/*# sourceMappingURL=index.css.map */

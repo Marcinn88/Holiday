@@ -1,14 +1,16 @@
-const mainModalWrapper = document.querySelector('.main__modal-wrapper')
-const closeBtn = document.querySelector('#closeModal');
-const showBtn = document.querySelector('#showModal')
+export const mainModalWrapper = document.querySelector('.main__modal-wrapper')
+export const closeBtn = document.querySelector('#closeModal');
+export const showBtn = document.querySelector('#showModal')
 
-closeBtn.addEventListener('click', closeFunction =()=> {
-    mainModalWrapper.classList.add('is-hidden-modal');
-});
+// closeBtn.addEventListener('click', closeFunction =()=> {
+//     mainModalWrapper.classList.add('is-hidden-modal');
+// });
 
-showBtn.addEventListener('click', openFunction = () => {
-    mainModalWrapper.classList.remove('is-hidden-modal');
-})
+
+
+// showBtn.addEventListener('click', openFunction = () => {
+//     mainModalWrapper.classList.remove('is-hidden-modal');
+// })
 
 
 // Add a "checked" symbol when clicking on a list item
@@ -25,3 +27,6 @@ listThree.addEventListener('click', checkElement = (ev) => {if (ev.target.tagNam
 listFour.addEventListener('click', checkElement = (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
 listFive.addEventListener('click', checkElement = (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
 listSix.addEventListener('click', checkElement = (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
+
+
+

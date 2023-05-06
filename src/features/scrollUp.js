@@ -1,9 +1,9 @@
 // let mybutton = document.getElementById('myBtn');
 mybutton = document.querySelector('#myBtn');
 
-mybutton.addEventListener('click', topFunction=()=>{
-    window.scrollTo({top: 0, behavior: 'smooth', });
-  });
+// export const topFunction = () => {window.scrollTo({top: 0, behavior: 'smooth', })}
+
+// mybutton.addEventListener('click', topFunction());
 
 window.onscroll = function() {scrollFunction()};
 

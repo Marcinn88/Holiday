@@ -1,7 +1,7 @@
 import simpleLightbox from "simplelightbox";
 import { countdown } from "./features/timer";
 import { checkWeatherOne, checkWeatherTwo, checkWeatherThree } from "./features/weather"
-import { scrollFunction, topFunction } from "./features/scrollUp";
+import { scrollFunction } from "./features/scrollUp";
 
 const cityOne = 'Agia Pelagia'
 const cityTwo = 'Heraklion'

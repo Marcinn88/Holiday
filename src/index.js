@@ -5,13 +5,11 @@ import { scrollFunction, scrollFunctionMenu, scrollFunctionMap } from "./feature
 import { closeBtn, mainModalWrapper,showBtn, closeFunction, openFunction, checkElement } from "./features/modal";
 import { initializeApp } from "firebase/app";
 
-closeBtn.addEventListener('click', closeFunction =()=> {
-    mainModalWrapper.classList.add('is-hidden-modal');
-});
-
-showBtn.addEventListener('click', openFunction = () => {
-    mainModalWrapper.classList.remove('is-hidden-modal');
-})
+const mainModalWrapper = document.querySelector('.main__modal-wrapper')
+const closeBtn = document.querySelector('#closeModal');
+const showBtn = document.querySelector('#showModal')
+closeBtn.addEventListener('click', closeFunction =()=> {mainModalWrapper.classList.add('is-hidden-modal')});
+showBtn.addEventListener('click', openFunction = () => {mainModalWrapper.classList.remove('is-hidden-modal')});
 
 // Your web app's Firebase configuration
 const firebaseConfig = {

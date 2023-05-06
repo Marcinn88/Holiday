@@ -2,7 +2,7 @@ import simpleLightbox from "simplelightbox";
 import { countdown } from "./features/timer";
 import { checkWeatherOne, checkWeatherTwo, checkWeatherThree } from "./features/weather"
 import { scrollFunction, scrollFunctionMenu, scrollFunctionMap } from "./features/scrollUp";
-import { checkElement } from "./features/modal";
+// import { checkElement } from "./features/modal";
 import { initializeApp } from "firebase/app";
 
 const mainModalWrapper = document.querySelector('.main__modal-wrapper')

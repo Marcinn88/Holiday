@@ -695,4 +695,95 @@ html {
 .is-hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.main__modal-wrapper {
+  position: relative;
+}
+
+.main__modal-backdrop {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.main__modal-window {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  z-index: 101;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.is-hidden-modal {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.X-modal {
+  top: -15px;
+  right: -15px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid blue;
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .is-hidden-modal {
+    animation: close ease-in-out 5s;
+  }
+}
+.modal__content-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: aqua;
+}
+
+.modal__day-list {
+  display: flex;
+  background-color: red;
+  padding: 20px;
+  gap: 30px;
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+.modal__list {
+  list-style-position: inside;
+  padding-left: 0;
+  background-color: blue;
+  list-style-type: none;
+}
+
+.modal__list-element {
+  background-color: green;
+  border-radius: 15px;
+  padding: 5px;
+  margin: 5px 0;
 }/*# sourceMappingURL=index.css.map */

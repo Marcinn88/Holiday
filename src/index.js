@@ -2,10 +2,11 @@ import simpleLightbox from "simplelightbox";
 import { countdown } from "./features/timer";
 import { checkWeatherOne, checkWeatherTwo, checkWeatherThree } from "./features/weather"
 import { scrollFunction, scrollFunctionMenu, scrollFunctionMap } from "./features/scrollUp";
-
+import { closeFunction, openFunction } from "./features/modal";
 const cityOne = 'Agia Pelagia'
 const cityTwo = 'Heraklion'
 const cityThree = 'Chania'
+
 
 
 countdown()

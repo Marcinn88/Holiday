@@ -1,13 +1,14 @@
 // let mybutton = document.getElementById('myBtn');
 const mybutton = document.querySelector('.scrollUp a #myBtn');
 const mybuttonMenu = document.querySelector('.scrollToMenu a #myBtnMenu');
+const mybuttonMap = document.querySelector('.scrollMap a #myBtnMap');
 
 
 // export const topFunction = () => {window.scrollTo({top: 0, behavior: 'smooth', })}
 
 // mybutton.addEventListener('click', topFunction());
 
-window.onscroll = function() {scrollFunction(), scrollFunctionMenu()};
+window.onscroll = function() {scrollFunction(), scrollFunctionMenu(), scrollFunctionMap()};
 
 
 export function scrollFunction() {
@@ -26,3 +27,10 @@ export function scrollFunctionMenu() {
   }
 }
 
+export function scrollFunctionMap() {
+  if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
+    mybuttonMap.style.display = "block";
+  } else {
+    mybuttonMap.style.display = "none";
+  }
+}

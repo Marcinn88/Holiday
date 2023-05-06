@@ -1,5 +1,6 @@
 // let mybutton = document.getElementById('myBtn');
-mybutton = document.querySelector('#myBtn');
+const mybutton = document.querySelector('.scrollUp a #myBtn');
+
 
 // export const topFunction = () => {window.scrollTo({top: 0, behavior: 'smooth', })}
 

@@ -674,8 +674,25 @@ html {
     transform: scale(1, 0.025);
   }
 }
+@keyframes wipe-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   .myBtn-animation {
     animation: wipe-enter 1s 1;
   }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .is-hidden {
+    animation: wipe-out 1s 1;
+  }
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }/*# sourceMappingURL=index.css.map */

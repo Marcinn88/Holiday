@@ -7,20 +7,6 @@ const cityOne = 'Agia Pelagia'
 const cityTwo = 'Heraklion'
 const cityThree = 'Chania'
 
-// export const attractionOneBtn = document.querySelector('#attraction-One');
-// attractionOneBtn.addEventListener('click', moveTo=()=>{
-
-//     window.scrollTo(attractionOneBtn.offsetLeft, attractionOneBtn.offsetTop);
-//   });
-const dayOne = document.querySelector('#dayOne')
-const dayOneTarget = (dayOne.offsetTop)
-const attractionOneBtn = document.querySelector('#attraction-One');
-
-attractionOneBtn.addEventListener('click', moveTo=()=>{
-console.log(dayOneTarget)
-console.log(dayOne)
-    window.scrollTo({top:dayOneTarget, behavior: 'smooth', });
-  });
 
 countdown()
 checkWeatherOne(cityOne)
@@ -63,3 +49,5 @@ const lightboxSix = new SimpleLightbox(".gallerySix a", {
     captionDelay: 250,
     overlayOpacity: 0.9,
 });
+
+

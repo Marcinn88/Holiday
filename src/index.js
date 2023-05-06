@@ -1,3 +1,4 @@
+import simpleLightbox from "simplelightbox";
 import { countdown } from "./features/timer";
 import { checkWeatherOne, checkWeatherTwo, checkWeatherThree } from "./features/weather"
 const cityOne = 'Agia Pelagia'
@@ -7,3 +8,40 @@ countdown()
 checkWeatherOne(cityOne)
 checkWeatherTwo(cityTwo)
 checkWeatherThree(cityThree)
+
+
+const lightboxOne = new SimpleLightbox(".galleryOne a", {
+    captionsData: "alt",
+    captionDelay: 250,
+    overlayOpacity: 0.9,
+});
+
+const lightboxTwo = new SimpleLightbox(".galleryTwo a", {
+    captionsData: "alt",
+    captionDelay: 250,
+    overlayOpacity: 0.9,
+});
+
+const lightboxThree = new SimpleLightbox(".galleryThree a", {
+    captionsData: "alt",
+    captionDelay: 250,
+    overlayOpacity: 0.9,
+});
+
+const lightboxFour = new SimpleLightbox(".galleryFour a", {
+    captionsData: "alt",
+    captionDelay: 250,
+    overlayOpacity: 0.9,
+});
+
+const lightboxFive = new SimpleLightbox(".galleryFive a", {
+    captionsData: "alt",
+    captionDelay: 250,
+    overlayOpacity: 0.9,
+});
+
+const lightboxSix = new SimpleLightbox(".gallerySix a", {
+    captionsData: "alt",
+    captionDelay: 250,
+    overlayOpacity: 0.9,
+});

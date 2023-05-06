@@ -1,4 +1,5 @@
-let mybutton = document.getElementById("myBtn");
+// let mybutton = document.getElementById('myBtn');
+mybutton = document.querySelector('#myBtn');
 
 mybutton.addEventListener('click', topFunction=()=>{
     window.scrollTo({top: 0, behavior: 'smooth', });

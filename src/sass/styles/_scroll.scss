@@ -1,8 +1,6 @@
-#myBtn {
+.navBtn{
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
   z-index: 99;
   border: none;
   outline: none;
@@ -14,42 +12,20 @@
   width: 70px;
   height: 70px;
 
+}
+#myBtn {
+  bottom: 20px;
+  right: 30px;
 }
   
 #myBtnMap {
-  display: none;
-  position: fixed;
   bottom: 100px;
   right: 30px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: #fff;
-  color: white;
-  cursor: pointer;
-  border: solid 1px rgb(113, 152, 211);
-  border-radius: 15px;
-  width: 70px;
-  height: 70px;
-
 }
   
 #myBtnMenu {
-  display: none;
-  position: fixed;
   bottom: 180px;
   right: 30px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: #fff;
-  color: white;
-  cursor: pointer;
-  border: solid 1px rgb(113, 152, 211);
-  border-radius: 15px;
-  width: 70px;
-  height: 70px;
-  
 }
   
 #myBtn:hover,
@@ -59,3 +35,17 @@
   box-shadow: 0px 1px 3px 0px rgba(160, 160, 160, 0.2),
   0px 1px 1px 0px rgba(173, 173, 173, 0.14), 0px 2px 1px -1px rgba(175, 175, 175, 0.12);
 }
+@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+@media (prefers-reduced-motion: no-preference) {
+  .myBtn-animation{
+    animation: wipe-enter 1s 1;
+  }
+
+  }

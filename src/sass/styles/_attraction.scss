@@ -21,6 +21,10 @@
     min-height: 440px;
     & ul { list-style-type:square;
     color:rgb(3, 19, 92)}
+    &:hover{
+            box-shadow: 0px 1px 3px 0px rgba(48, 48, 48, 0.2),
+            0px 5px 5px 0px rgba(63, 63, 63, 0.14), 0px 2px 1px -1px rgba(63, 63, 63, 0.12);
+    }
 }
 .attraction__day-title{
     font-size: 25px;

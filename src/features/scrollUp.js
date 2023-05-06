@@ -1,10 +1,9 @@
-
 let mybutton = document.getElementById("myBtn");
+
 mybutton.addEventListener('click', topFunction=()=>{
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    console.log('button dziala')
+    window.scrollTo({top: 0, behavior: 'smooth', });
   });
+
 window.onscroll = function() {scrollFunction()};
 
 export function scrollFunction() {

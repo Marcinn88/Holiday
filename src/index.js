@@ -2,7 +2,7 @@ import simpleLightbox from "simplelightbox";
 import { countdown } from "./features/timer";
 import { checkWeatherOne, checkWeatherTwo, checkWeatherThree } from "./features/weather"
 import { scrollFunction, topFunction } from "./features/scrollUp";
-const $ = require( "jquery" )( window );
+
 const cityOne = 'Agia Pelagia'
 const cityTwo = 'Heraklion'
 const cityThree = 'Chania'

@@ -4,7 +4,7 @@ import { checkWeatherOne, checkWeatherTwo, checkWeatherThree } from "./features/
 import { scrollFunction, scrollFunctionMenu, scrollFunctionMap } from "./features/scrollUp";
 // import { checkElement } from "./features/modal";
 import { initializeApp } from "firebase/app";
-import { visited, getVisited } from "./features/modal";
+import { visited, getVisited, saveVisitedToStorage, getVisitedFromStorage } from "./features/modal";
 const mainModalWrapper = document.querySelector('.main__modal-wrapper')
 const closeBtn = document.querySelector('#closeModal');
 const showBtn = document.querySelector('#showModal')
@@ -81,13 +81,60 @@ const lightboxSix = new SimpleLightbox(".gallerySix a", {
 });
 
 
-listOne.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
-listTwo.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
-listThree.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
-listFour.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
-listFive.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
-listSix.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
+listOne.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked')
+    const id = ev.target.dataset.id
+    const place = getVisitedFromStorage()
+    if (place.DayOne[id].visit==0) { place.DayOne[id].visit=1 } 
+    else{ place.DayOne[id].visit=0 }
+    saveVisitedToStorage(place)
+}}, false);
 
+
+listTwo.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked')
+    const id = ev.target.dataset.id
+    const place = getVisitedFromStorage()
+    if (place.DayTwo[id].visit==0) { place.DayTwo[id].visit=1 } 
+    else{ place.DayTwo[id].visit=0 }
+    saveVisitedToStorage(place)
+}}, false);
+
+listThree.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked')
+    const id = ev.target.dataset.id
+    const place = getVisitedFromStorage()
+    if (place.DayThree[id].visit==0) { place.DayThree[id].visit=1 } 
+    else{ place.DayThree[id].visit=0 }
+    saveVisitedToStorage(place)
+}}, false);
+
+listFour.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked')
+    const id = ev.target.dataset.id
+    const place = getVisitedFromStorage()
+    if (place.DayFour[id].visit==0) { place.DayFour[id].visit=1 } 
+    else{ place.DayFour[id].visit=0 }
+    saveVisitedToStorage(place)
+}}, false);
+
+listFive.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked')
+    const id = ev.target.dataset.id
+    const place = getVisitedFromStorage()
+    if (place.DayFive[id].visit==0) { place.DayFive[id].visit=1 } 
+    else{ place.DayFive[id].visit=0 }
+    saveVisitedToStorage(place)
+}}, false);
+    
+listSix.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked')
+    const id = ev.target.dataset.id
+    const place = getVisitedFromStorage()
+    if (place.DaySix[id].visit==0) { place.DaySix[id].visit=1 } 
+    else{ place.DaySix[id].visit=0 }
+    saveVisitedToStorage(place)
+}}, false);
 
 showBtn.addEventListener('click', () => {
     mainModalWrapper.classList.remove('is-hidden-modal')

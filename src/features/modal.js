@@ -32,39 +32,39 @@
 export const visited =
 {
     DayOne:[ 
-        {id:1, name:'Droga do Krakowa', visit:0}, 
-        {id:2, name:'Lot samolotem', visit:0}, 
-        {id:3, name:'BlueBay Resort', visit:0}, 
-        {id:4, name:'Agia Pelagia', visit:0}],
+        {id:0, name:'Droga do Krakowa', visit:0}, 
+        {id:1, name:'Lot samolotem', visit:0}, 
+        {id:2, name:'BlueBay Resort', visit:0}, 
+        {id:3, name:'Agia Pelagia', visit:0}],
     DayTwo:[ 
-        {id:5, name:'SARAKINOS Car Rental', visit:0}, 
-        {id:6, name:'Retimno', visit:0}, 
-        {id:7, name:'Agia Triada', visit:0}, 
-        {id:8, name:'Moni Arkadiou', visit:0}, 
-        {id:9, name:'Preveli Beach', visit:0}, 
-        {id:10, name:'Matala', visit:0}, 
-        {id:11, name:'Jezioro Kornas', visit:0}],
+        {id:0, name:'SARAKINOS Car Rental', visit:0}, 
+        {id:1, name:'Retimno', visit:0}, 
+        {id:2, name:'Agia Triada', visit:0}, 
+        {id:3, name:'Moni Arkadiou', visit:0}, 
+        {id:4, name:'Preveli Beach', visit:0}, 
+        {id:5, name:'Matala', visit:0}, 
+        {id:6, name:'Jezioro Kornas', visit:0}],
     DayThree:[
-        {id:12, name:'Chania', visit:0}, 
-        {id:13, name:'Katholiko Monastery', visit:0}, 
-        {id:14, name:'Gonia Odigitria Monastery', visit:0}, 
-        {id:15, name:'Moni Arkadiou', visit:0}, 
-        {id:16, name:'Balos Beach', visit:0}, 
-        {id:17, name:'Elafonisi Beach', visit:0}],
+        {id:0, name:'Chania', visit:0}, 
+        {id:1, name:'Katholiko Monastery', visit:0}, 
+        {id:2, name:'Gonia Odigitria Monastery', visit:0}, 
+        {id:3, name:'Moni Arkadiou', visit:0}, 
+        {id:4, name:'Balos Beach', visit:0}, 
+        {id:5, name:'Elafonisi Beach', visit:0}],
     DayFour:[
-        {id:18, name:'Heraklion', visit:0}, 
-        {id:19, name:'Pałac Knossoss', visit:0}, 
-        {id:20, name:'Gortyna', visit:0}, 
-        {id:21, name:'Ajos Nikolaos', visit:0}, 
-        {id:22, name:'Vai Beach', visit:0}],        
+        {id:0, name:'Heraklion', visit:0}, 
+        {id:1, name:'Pałac Knossoss', visit:0}, 
+        {id:2, name:'Gortyna', visit:0}, 
+        {id:3, name:'Ajos Nikolaos', visit:0}, 
+        {id:4, name:'Vai Beach', visit:0}],        
     DayFive:[
-        {id:23, name:'SARAKINOS Car Rental', visit:0}, 
-        {id:24, name:'BlueBay Resort - Atrakcje', visit:0}],
+        {id:0, name:'SARAKINOS Car Rental', visit:0}, 
+        {id:1, name:'BlueBay Resort - Atrakcje', visit:0}],
     DaySix:[
-        {id:25, name:'Pożegnanie z Kretą', visit:0}, 
-        {id:26, name:'Spakowanie rzeczy', visit:0}, 
-        {id:27, name:'Lot samolotem', visit:0}, 
-        {id:28, name:'Powrót samochodem', visit:0}]
+        {id:0, name:'Pożegnanie z Kretą', visit:0}, 
+        {id:1, name:'Spakowanie rzeczy', visit:0}, 
+        {id:2, name:'Lot samolotem', visit:0}, 
+        {id:3, name:'Powrót samochodem', visit:0}]
 }
 
 //--- Pobieranie danych z LS
@@ -84,27 +84,26 @@ export const getVisited = () =>{
     if (getVisitedFromStorage()==null){
         saveVisitedToStorage(visited);
         console.log('brak informacji w LS, zapisano nową baze');
-        console.log(visited);
-        // return visited;
+        // console.log(visited);
+        renderDayOne(visited.DayOne)
+        renderDayTwo(visited.DayTwo)
+        renderDayThree(visited.DayThree)
+        renderDayFour(visited.DayFour)
+        renderDayFive(visited.DayFive)
+        renderDaySix(visited.DaySix)
     }
     else{
-        getVisitedFromStorage();
+        const visitedLs = getVisitedFromStorage();
         console.log('pobrano dane z LS');
-        console.log(visited);
-        // return visited
+        // console.log(visited);
+        renderDayOne(visitedLs.DayOne)
+        renderDayTwo(visitedLs.DayTwo)
+        renderDayThree(visitedLs.DayThree)
+        renderDayFour(visitedLs.DayFour)
+        renderDayFive(visitedLs.DayFive)
+        renderDaySix(visitedLs.DaySix)
     }
-    console.log(visited.DayOne)
-    console.log(visited.DayTwo)
-    console.log(visited.DayThree)
-    console.log(visited.DayFour)
-    console.log(visited.DayFive)
-    console.log(visited.DaySix)
-    renderDayOne(visited.DayOne)
-    renderDayTwo(visited.DayTwo)
-    renderDayThree(visited.DayThree)
-    renderDayFour(visited.DayFour)
-    renderDayFive(visited.DayFive)
-    renderDaySix(visited.DaySix)
+
 }
 const modalDayOne = document.querySelector('.modal__list-One');
 const modalDayTwo = document.querySelector('.modal__list-Two');
@@ -116,36 +115,36 @@ const modalDaySix = document.querySelector('.modal__list-Six');
 export const renderDayOne = (elements) => {
     modalDayOne.innerHTML = ''
     const markup = elements
-        .map(({ name, visit }) => {
-            if (visit==0) {return `<li class="modal__list-element">${name}</li>`} 
-            else {return `<li class="modal__list-element checked">${name}</li>`}})
+        .map(({id, name, visit }) => {
+            if (visit==0) {return `<li data-id="${id}" class="modal__list-element">${name}</li>`} 
+            else {return `<li data-id="${id}" class="modal__list-element checked">${name}</li>`}})
         .join('');
     modalDayOne.insertAdjacentHTML('beforeend', markup);
 }
 export const renderDayTwo = (elements) => {
     modalDayTwo.innerHTML = ''
     const markup = elements
-        .map(({ name, visit }) => {
-            if (visit==0) {return `<li class="modal__list-element">${name}</li>`} 
-            else {return `<li class="modal__list-element checked">${name}</li>`}})
+        .map(({id, name, visit }) => {
+            if (visit==0) {return `<li data-id="${id}" class="modal__list-element">${name}</li>`} 
+            else {return `<li data-id="${id}" class="modal__list-element checked">${name}</li>`}})
         .join('');
     modalDayTwo.insertAdjacentHTML('beforeend', markup);
 }
 export const renderDayThree = (elements) => {
     modalDayThree.innerHTML = ''
     const markup = elements
-        .map(({ name, visit }) => {
-            if (visit==0) {return `<li class="modal__list-element">${name}</li>`} 
-            else {return `<li class="modal__list-element checked">${name}</li>`}})
+        .map(({id, name, visit }) => {
+            if (visit==0) {return `<li data-id="${id}" class="modal__list-element">${name}</li>`} 
+            else {return `<li data-id="${id}" class="modal__list-element checked">${name}</li>`}})
         .join('');
     modalDayThree.insertAdjacentHTML('beforeend', markup);
 }
 export const renderDayFour = (elements) => {
     modalDayFour.innerHTML = ''
     const markup = elements
-        .map(({ name, visit }) => {
-            if (visit==0) {return `<li class="modal__list-element">${name}</li>`} 
-            else {return `<li class="modal__list-element checked">${name}</li>`}})
+        .map(({id, name, visit }) => {
+            if (visit==0) {return `<li data-id="${id}" class="modal__list-element">${name}</li>`} 
+            else {return `<li data-id="${id}" class="modal__list-element checked">${name}</li>`}})
         .join('');
     modalDayFour.insertAdjacentHTML('beforeend', markup);
 }
@@ -153,18 +152,18 @@ export const renderDayFour = (elements) => {
 export const renderDayFive = (elements) => {
     modalDayFive.innerHTML = ''
     const markup = elements
-        .map(({ name, visit }) => {
-            if (visit==0) {return `<li class="modal__list-element">${name}</li>`} 
-            else {return `<li class="modal__list-element checked">${name}</li>`}})
+        .map(({id, name, visit }) => {
+            if (visit==0) {return `<li data-id="${id}" class="modal__list-element">${name}</li>`} 
+            else {return `<li data-id="${id}" class="modal__list-element checked">${name}</li>`}})
         .join('');
     modalDayFive.insertAdjacentHTML('beforeend', markup);
 }
 export const renderDaySix = (elements) => {
     modalDaySix.innerHTML = ''
     const markup = elements
-        .map(({ name, visit }) => {
-            if (visit==0) {return `<li class="modal__list-element">${name}</li>`} 
-            else {return `<li class="modal__list-element checked">${name}</li>`}})
+        .map(({id, name, visit }) => {
+            if (visit==0) {return `<li data-id="${id}" class="modal__list-element">${name}</li>`} 
+            else {return `<li data-id="${id}" class="modal__list-element checked">${name}</li>`}})
         .join('');
     modalDaySix.insertAdjacentHTML('beforeend', markup);
 }

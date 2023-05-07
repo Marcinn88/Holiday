@@ -841,4 +841,108 @@ html {
   left: -12px;
   top: -10px;
   position: absolute;
+}
+
+.modal__day-shield {
+  width: 200px;
+  height: 200px;
+}
+
+.grey-shield::after {
+  content: "";
+  background-image: url(./../images/shields/shield-0.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 200px;
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.grey-shield25::after {
+  content: "";
+  background-image: url(./../images/shields/shield-25.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 200px;
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.grey-shield75::after {
+  content: "";
+  background-image: url(./../images/shields/shield-75.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 200px;
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.gold-One::after {
+  content: "";
+  background-image: url(./../images/shields/start.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 200px;
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.gold-Two::after {
+  content: "";
+  background-image: url(./../images/shields/retimno.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 200px;
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.gold-Three::after {
+  content: "";
+  background-image: url(./../images/shields/chania.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 200px;
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.gold-Four::after {
+  content: "";
+  background-image: url(./../images/shields/heraklion.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 200px;
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.gold-Five::after {
+  content: "";
+  background-image: url(./../images/shields/agia.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 200px;
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.gold-Six::after {
+  content: "";
+  background-image: url(./../images/shields/kreta.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 200px;
+  display: block;
+  width: 200px;
+  height: 200px;
 }/*# sourceMappingURL=index.css.map */

@@ -108,6 +108,13 @@ const modalDayFour = document.querySelector('.modal__list-Four');
 const modalDayFive = document.querySelector('.modal__list-Five');
 const modalDaySix = document.querySelector('.modal__list-Six');
 
+const modalShieldOne = document.querySelector('.modal__shield-One');
+const modalShieldTwo = document.querySelector('.modal__shield-Two');
+const modalShieldThree = document.querySelector('.modal__shield-Three');
+const modalShieldFour = document.querySelector('.modal__shield-Four');
+const modalShieldFive = document.querySelector('.modal__shield-Five');
+const modalShieldSix = document.querySelector('.modal__shield-Six');
+
 export const renderDayOne = (elements) => {
     modalDayOne.innerHTML = ''
     const markup = elements
@@ -167,65 +174,323 @@ export const renderDaySix = (elements) => {
 export const sumCheckedOne = () => {
     const data = getVisitedFromStorage()
     const dayData = data.DayOne
-    let sumVisited = 0
+    let sumVisitedOne = 0
     for (let i = 0; i < dayData.length; i++) {
         let element = dayData[i].visit;
-        sumVisited += element;
+        sumVisitedOne += element;
     }
-    console.log(sumVisited)
+    console.log(sumVisitedOne)
+    return sumVisitedOne
 }
 
 export const sumCheckedTwo = () => {
     const data = getVisitedFromStorage()
     const dayData = data.DayTwo
-    let sumVisited = 0
+    let sumVisitedTwo = 0
     for (let i = 0; i < dayData.length; i++) {
         let element = dayData[i].visit;
-        sumVisited += element;
+        sumVisitedTwo += element;
     }
-    console.log(sumVisited)
+    console.log(sumVisitedTwo)
+    return sumVisitedTwo
 }
 
 export const sumCheckedThree = () => {
     const data = getVisitedFromStorage()
     const dayData = data.DayThree
-    let sumVisited = 0
+    let sumVisitedThree = 0
     for (let i = 0; i < dayData.length; i++) {
         let element = dayData[i].visit;
-        sumVisited += element;
+        sumVisitedThree += element;
     }
-    console.log(sumVisited)
+    console.log(sumVisitedThree)
+    return sumVisitedThree
 }
 
 export const sumCheckedFour = () => {
     const data = getVisitedFromStorage()
     const dayData = data.DayFour
-    let sumVisited = 0
+    let sumVisitedFour = 0
     for (let i = 0; i < dayData.length; i++) {
         let element = dayData[i].visit;
-        sumVisited += element;
+        sumVisitedFour += element;
     }
-    console.log(sumVisited)
+    console.log(sumVisitedFour)
+    return sumVisitedFour
 }
 
 export const sumCheckedFive = () => {
     const data = getVisitedFromStorage()
     const dayData = data.DayFive
-    let sumVisited = 0
+    let sumVisitedFive = 0
     for (let i = 0; i < dayData.length; i++) {
         let element = dayData[i].visit;
-        sumVisited += element;
+        sumVisitedFive += element;
     }
-    console.log(sumVisited)
+    console.log(sumVisitedFive)
+    return sumVisitedFive
 }
 
 export const sumCheckedSix = () => {
     const data = getVisitedFromStorage()
     const dayData = data.DaySix
-    let sumVisited = 0
+    let sumVisitedSix = 0
     for (let i = 0; i < dayData.length; i++) {
         let element = dayData[i].visit;
-        sumVisited += element;
+        sumVisitedSix += element;
     }
-    console.log(sumVisited)
+    console.log(sumVisitedSix)
+    return sumVisitedSix
 }
+
+export const dayRatioOne = () =>{
+    const data = getVisitedFromStorage()
+    const elementQuantity = data.DayOne.length
+    const elementSum = sumCheckedOne()
+    const ratioOne = (elementSum*100)/elementQuantity
+    console.log(ratioOne)
+    return ratioOne
+    }
+
+export const dayRatioTwo = () =>{
+    const data = getVisitedFromStorage()
+    const elementQuantity = data.DayTwo.length
+    const elementSum = sumCheckedTwo()
+    const ratioTwo = (elementSum*100)/elementQuantity
+    console.log(ratioTwo)
+    return ratioTwo
+    }
+
+export const dayRatioThree = () =>{
+    const data = getVisitedFromStorage()
+    const elementQuantity = data.DayThree.length
+    const elementSum = sumCheckedThree()
+    const ratioThree = (elementSum*100)/elementQuantity
+    console.log(ratioThree)
+    return ratioThree
+    }
+
+export const dayRatioFour = () =>{
+    const data = getVisitedFromStorage()
+    const elementQuantity = data.DayFour.length
+    const elementSum = sumCheckedFour()
+    const ratioFour = (elementSum*100)/elementQuantity
+    console.log(ratioFour)
+    return ratioFour
+    }
+
+export const dayRatioFive = () =>{
+    const data = getVisitedFromStorage()
+    const elementQuantity = data.DayFive.length
+    const elementSum = sumCheckedFive()
+    const ratioFive = (elementSum*100)/elementQuantity
+    console.log(ratioFive)
+    return ratioFive
+    }
+    
+export const dayRatioSix = () =>{
+    const data = getVisitedFromStorage()
+    const elementQuantity = data.DaySix.length
+    const elementSum = sumCheckedSix()
+    const ratioSix = (elementSum*100)/elementQuantity
+    console.log(ratioSix)
+    return ratioSix
+    }
+
+export const renderShieldOne = () => {
+const shieldRatio = dayRatioOne()
+if (shieldRatio<25) {
+    modalShieldOne.classList.add('grey-shield')
+    modalShieldOne.classList.remove('grey-shield25')
+    modalShieldOne.classList.remove('grey-shield75')
+    modalShieldOne.classList.remove('gold-One')
+    console.log('mniej niz 25')
+    console.log(shieldRatio)
+} else if (shieldRatio>=25 && shieldRatio <75) {
+    modalShieldOne.classList.remove('grey-shield')
+    modalShieldOne.classList.add('grey-shield25')
+    modalShieldOne.classList.remove('grey-shield75')
+    modalShieldOne.classList.remove('gold-One')
+    console.log('wiecej niz 25 mniej niz 75')
+    console.log(shieldRatio)
+} else if (shieldRatio>=75 && shieldRatio <100) {
+    modalShieldOne.classList.remove('grey-shield')
+    modalShieldOne.classList.remove('grey-shield25')
+    modalShieldOne.classList.add('grey-shield75')
+    modalShieldOne.classList.remove('gold-One')
+    console.log('wiecej niz 75 mniej niz 100')
+    console.log(shieldRatio)
+} else{
+    modalShieldOne.classList.remove('grey-shield')
+    modalShieldOne.classList.remove('grey-shield25')
+    modalShieldOne.classList.remove('grey-shield75')
+    modalShieldOne.classList.add('gold-One')    
+    console.log('max')
+    console.log(shieldRatio)
+}
+}
+
+export const renderShieldTwo = () => {
+    const shieldRatio = dayRatioTwo()
+    if (shieldRatio<25) {
+        modalShieldTwo.classList.add('grey-shield')
+        modalShieldTwo.classList.remove('grey-shield25')
+        modalShieldTwo.classList.remove('grey-shield75')
+        modalShieldTwo.classList.remove('gold-Two')
+        console.log('mniej niz 25')
+        console.log(shieldRatio)
+    } else if (shieldRatio>=25 && shieldRatio <75) {
+        modalShieldTwo.classList.remove('grey-shield')
+        modalShieldTwo.classList.add('grey-shield25')
+        modalShieldTwo.classList.remove('grey-shield75')
+        modalShieldTwo.classList.remove('gold-Two')
+        console.log('wiecej niz 25 mniej niz 75')
+        console.log(shieldRatio)
+    } else if (shieldRatio>=75 && shieldRatio <100) {
+        modalShieldTwo.classList.remove('grey-shield')
+        modalShieldTwo.classList.remove('grey-shield25')
+        modalShieldTwo.classList.add('grey-shield75')
+        modalShieldTwo.classList.remove('gold-Two')
+        console.log('wiecej niz 75 mniej niz 100')
+        console.log(shieldRatio)
+    } else{
+        modalShieldTwo.classList.remove('grey-shield')
+        modalShieldTwo.classList.remove('grey-shield25')
+        modalShieldTwo.classList.remove('grey-shield75')
+        modalShieldTwo.classList.add('gold-Two')    
+        console.log('max')
+        console.log(shieldRatio)
+    }
+    }
+
+export const renderShieldThree = () => {
+    const shieldRatio = dayRatioThree()
+    if (shieldRatio<25) {
+        modalShieldThree.classList.add('grey-shield')
+        modalShieldThree.classList.remove('grey-shield25')
+        modalShieldThree.classList.remove('grey-shield75')
+        modalShieldThree.classList.remove('gold-Three')
+        console.log('mniej niz 25')
+        console.log(shieldRatio)
+    } else if (shieldRatio>=25 && shieldRatio <75) {
+        modalShieldThree.classList.remove('grey-shield')
+        modalShieldThree.classList.add('grey-shield25')
+        modalShieldThree.classList.remove('grey-shield75')
+        modalShieldThree.classList.remove('gold-Three')
+        console.log('wiecej niz 25 mniej niz 75')
+        console.log(shieldRatio)
+    } else if (shieldRatio>=75 && shieldRatio <100) {
+        modalShieldThree.classList.remove('grey-shield')
+        modalShieldThree.classList.remove('grey-shield25')
+        modalShieldThree.classList.add('grey-shield75')
+        modalShieldThree.classList.remove('gold-Three')
+        console.log('wiecej niz 75 mniej niz 100')
+        console.log(shieldRatio)
+    } else{
+        modalShieldThree.classList.remove('grey-shield')
+        modalShieldThree.classList.remove('grey-shield25')
+        modalShieldThree.classList.remove('grey-shield75')
+        modalShieldThree.classList.add('gold-Three')    
+        console.log('max')
+        console.log(shieldRatio)
+    }
+    }
+
+export const renderShieldFour = () => {
+    const shieldRatio = dayRatioFour()
+    if (shieldRatio<25) {
+        modalShieldFour.classList.add('grey-shield')
+        modalShieldFour.classList.remove('grey-shield25')
+        modalShieldFour.classList.remove('grey-shield75')
+        modalShieldFour.classList.remove('gold-Four')
+        console.log('mniej niz 25')
+        console.log(shieldRatio)
+    } else if (shieldRatio>=25 && shieldRatio <75) {
+        modalShieldFour.classList.remove('grey-shield')
+        modalShieldFour.classList.add('grey-shield25')
+        modalShieldFour.classList.remove('grey-shield75')
+        modalShieldFour.classList.remove('gold-Four')
+        console.log('wiecej niz 25 mniej niz 75')
+        console.log(shieldRatio)
+    } else if (shieldRatio>=75 && shieldRatio <100) {
+        modalShieldFour.classList.remove('grey-shield')
+        modalShieldFour.classList.remove('grey-shield25')
+        modalShieldFour.classList.add('grey-shield75')
+        modalShieldFour.classList.remove('gold-Four')
+        console.log('wiecej niz 75 mniej niz 100')
+        console.log(shieldRatio)
+    } else{
+        modalShieldFour.classList.remove('grey-shield')
+        modalShieldFour.classList.remove('grey-shield25')
+        modalShieldFour.classList.remove('grey-shield75')
+        modalShieldFour.classList.add('gold-Four')    
+        console.log('max')
+        console.log(shieldRatio)
+    }
+    }
+
+export const renderShieldFive = () => {
+    const shieldRatio = dayRatioFive()
+    if (shieldRatio<25) {
+        modalShieldFive.classList.add('grey-shield')
+        modalShieldFive.classList.remove('grey-shield25')
+        modalShieldFive.classList.remove('grey-shield75')
+        modalShieldFive.classList.remove('gold-Five')
+        console.log('mniej niz 25')
+        console.log(shieldRatio)
+    } else if (shieldRatio>=25 && shieldRatio <75) {
+        modalShieldFive.classList.remove('grey-shield')
+        modalShieldFive.classList.add('grey-shield25')
+        modalShieldFive.classList.remove('grey-shield75')
+        modalShieldFive.classList.remove('gold-Five')
+        console.log('wiecej niz 25 mniej niz 75')
+        console.log(shieldRatio)
+    } else if (shieldRatio>=75 && shieldRatio <100) {
+        modalShieldFive.classList.remove('grey-shield')
+        modalShieldFive.classList.remove('grey-shield25')
+        modalShieldFive.classList.add('grey-shield75')
+        modalShieldFive.classList.remove('gold-Five')
+        console.log('wiecej niz 75 mniej niz 100')
+        console.log(shieldRatio)
+    } else{
+        modalShieldFive.classList.remove('grey-shield')
+        modalShieldFive.classList.remove('grey-shield25')
+        modalShieldFive.classList.remove('grey-shield75')
+        modalShieldFive.classList.add('gold-Five')    
+        console.log('max')
+        console.log(shieldRatio)
+    }
+    }
+
+export const renderShieldSix = () => {
+    const shieldRatio = dayRatioSix()
+    if (shieldRatio<25) {
+        modalShieldSix.classList.add('grey-shield')
+        modalShieldSix.classList.remove('grey-shield25')
+        modalShieldSix.classList.remove('grey-shield75')
+        modalShieldSix.classList.remove('gold-Six')
+        console.log('mniej niz 25')
+        console.log(shieldRatio)
+    } else if (shieldRatio>=25 && shieldRatio <75) {
+        modalShieldSix.classList.remove('grey-shield')
+        modalShieldSix.classList.add('grey-shield25')
+        modalShieldSix.classList.remove('grey-shield75')
+        modalShieldSix.classList.remove('gold-Six')
+        console.log('wiecej niz 25 mniej niz 75')
+        console.log(shieldRatio)
+    } else if (shieldRatio>=75 && shieldRatio <100) {
+        modalShieldSix.classList.remove('grey-shield')
+        modalShieldSix.classList.remove('grey-shield25')
+        modalShieldSix.classList.add('grey-shield75')
+        modalShieldSix.classList.remove('gold-Six')
+        console.log('wiecej niz 75 mniej niz 100')
+        console.log(shieldRatio)
+    } else{
+        modalShieldSix.classList.remove('grey-shield')
+        modalShieldSix.classList.remove('grey-shield25')
+        modalShieldSix.classList.remove('grey-shield75')
+        modalShieldSix.classList.add('gold-Six')    
+        console.log('max')
+        console.log(shieldRatio)
+    }
+    }

@@ -13,7 +13,19 @@ import { sumCheckedOne,
          visited,
          getVisited, 
          saveVisitedToStorage, 
-         getVisitedFromStorage } from "./features/modal";
+         getVisitedFromStorage,
+         dayRatioOne,
+         dayRatioTwo,
+         dayRatioThree,
+         dayRatioFour,
+         dayRatioFive,
+         dayRatioSix,
+         renderShieldOne,
+         renderShieldTwo,
+         renderShieldThree,
+         renderShieldFour,
+         renderShieldFive,
+         renderShieldSix, } from "./features/modal";
 
 const mainModalWrapper = document.querySelector('.main__modal-wrapper')
 const closeBtn = document.querySelector('#closeModal');
@@ -98,6 +110,7 @@ listOne.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
     if (place.DayOne[id].visit==0) { place.DayOne[id].visit=1 } 
     else{ place.DayOne[id].visit=0 }
     saveVisitedToStorage(place)
+    renderShieldOne()
 }}, false);
 
 
@@ -108,6 +121,7 @@ listTwo.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
     if (place.DayTwo[id].visit==0) { place.DayTwo[id].visit=1 } 
     else{ place.DayTwo[id].visit=0 }
     saveVisitedToStorage(place)
+    renderShieldTwo()
 }}, false);
 
 listThree.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
@@ -117,6 +131,7 @@ listThree.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
     if (place.DayThree[id].visit==0) { place.DayThree[id].visit=1 } 
     else{ place.DayThree[id].visit=0 }
     saveVisitedToStorage(place)
+    renderShieldThree()
 }}, false);
 
 listFour.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
@@ -126,6 +141,7 @@ listFour.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
     if (place.DayFour[id].visit==0) { place.DayFour[id].visit=1 } 
     else{ place.DayFour[id].visit=0 }
     saveVisitedToStorage(place)
+    renderShieldFour()
 }}, false);
 
 listFive.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
@@ -135,6 +151,7 @@ listFive.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
     if (place.DayFive[id].visit==0) { place.DayFive[id].visit=1 } 
     else{ place.DayFive[id].visit=0 }
     saveVisitedToStorage(place)
+    renderShieldFive()
 }}, false);
     
 listSix.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
@@ -144,6 +161,7 @@ listSix.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
     if (place.DaySix[id].visit==0) { place.DaySix[id].visit=1 } 
     else{ place.DaySix[id].visit=0 }
     saveVisitedToStorage(place)
+    renderShieldSix()
 }}, false);
 
 showBtn.addEventListener('click', () => {
@@ -157,3 +175,10 @@ sumCheckedThree()
 sumCheckedFour()
 sumCheckedFive()
 sumCheckedSix()
+
+dayRatioOne()
+dayRatioTwo()
+dayRatioThree()
+dayRatioFour()
+dayRatioFive()
+dayRatioSix()

@@ -139,5 +139,4 @@ listSix.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
 showBtn.addEventListener('click', () => {
     mainModalWrapper.classList.remove('is-hidden-modal')
     getVisited(visited)
-    console.log('modal sie pokazal')
 });

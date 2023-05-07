@@ -83,8 +83,6 @@ export const saveVisitedToStorage = value => {
 export const getVisited = () =>{
     if (getVisitedFromStorage()==null){
         saveVisitedToStorage(visited);
-        console.log('brak informacji w LS, zapisano nową baze');
-        // console.log(visited);
         renderDayOne(visited.DayOne)
         renderDayTwo(visited.DayTwo)
         renderDayThree(visited.DayThree)
@@ -94,8 +92,6 @@ export const getVisited = () =>{
     }
     else{
         const visitedLs = getVisitedFromStorage();
-        console.log('pobrano dane z LS');
-        // console.log(visited);
         renderDayOne(visitedLs.DayOne)
         renderDayTwo(visitedLs.DayTwo)
         renderDayThree(visitedLs.DayThree)

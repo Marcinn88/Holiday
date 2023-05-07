@@ -67,17 +67,98 @@ export const visited =
         {id:3, name:'Powrót samochodem', visit:0}]
 }
 
-//--- Pobieranie danych z LS
+//--- Pobieranie danych z LS - Visited
 export const getVisitedFromStorage = () => {
     const visited = localStorage.getItem('visited');
     const parsedVisited = JSON.parse(visited);
     return parsedVisited;
 };
 
-//--- Zapis danych w LS
+//--- Zapis danych w LS - Visited
 export const saveVisitedToStorage = value => {
     const visited = value;
     localStorage.setItem('visited', JSON.stringify(visited));
+};
+
+
+// --- Zapis i Pobieranie Ratio
+
+//--- Pobieranie danych z LS
+export const getRatioOneFromStorage = () => {
+    const ratioOne = localStorage.getItem('ratioOne');
+    const parsedRatioOne = JSON.parse(ratioOne);
+    return parsedRatioOne;
+};
+
+//--- Zapis danych w LS
+export const saveRatioOneToStorage = value => {
+    const ratioOne = value;
+    localStorage.setItem('ratioOne', JSON.stringify(ratioOne));
+};
+
+//--- Pobieranie danych z LS
+export const getRatioTwoFromStorage = () => {
+    const ratioTwo = localStorage.getItem('ratioTwo');
+    const parsedRatioTwo = JSON.parse(ratioTwo);
+    return parsedRatioTwo;
+};
+
+//--- Zapis danych w LS
+export const saveRatioTwoToStorage = value => {
+    const ratioTwo = value;
+    localStorage.setItem('ratioTwo', JSON.stringify(ratioTwo));
+};
+
+//--- Pobieranie danych z LS
+export const getRatioThreeFromStorage = () => {
+    const ratioThree = localStorage.getItem('ratioThree');
+    const parsedRatioThree = JSON.parse(ratioThree);
+    return parsedRatioThree;
+};
+
+//--- Zapis danych w LS
+export const saveRatioThreeToStorage = value => {
+    const ratioThree = value;
+    localStorage.setItem('ratioThree', JSON.stringify(ratioThree));
+};
+
+//--- Pobieranie danych z LS
+export const getRatioFourFromStorage = () => {
+    const ratioFour = localStorage.getItem('ratioFour');
+    const parsedRatioFour = JSON.parse(ratioFour);
+    return parsedRatioFour;
+};
+
+//--- Zapis danych w LS
+export const saveRatioFourToStorage = value => {
+    const ratioFour = value;
+    localStorage.setItem('ratioFour', JSON.stringify(ratioFour));
+};
+
+//--- Pobieranie danych z LS
+export const getRatioFiveFromStorage = () => {
+    const ratioFive = localStorage.getItem('ratioFive');
+    const parsedRatioFive = JSON.parse(ratioFive);
+    return parsedRatioFive;
+};
+
+//--- Zapis danych w LS
+export const saveRatioFiveToStorage = value => {
+    const ratioFive = value;
+    localStorage.setItem('ratioFive', JSON.stringify(ratioFive));
+};
+
+//--- Pobieranie danych z LS
+export const getRatioSixFromStorage = () => {
+    const ratioSix = localStorage.getItem('ratioSix');
+    const parsedRatioSix = JSON.parse(ratioSix);
+    return parsedRatioSix;
+};
+
+//--- Zapis danych w LS
+export const saveRatioSixToStorage = value => {
+    const ratioSix = value;
+    localStorage.setItem('ratioSix', JSON.stringify(ratioSix));
 };
 
 export const getVisited = () =>{
@@ -243,12 +324,30 @@ export const sumCheckedSix = () => {
     return sumVisitedSix
 }
 
+// export const dayRatioOne = () =>{
+//     const data = getVisitedFromStorage()
+//     const elementQuantity = data.DayOne.length
+//     const elementSum = sumCheckedOne()
+//     const ratioStorage = getRatioOneFromStorage()
+//     if (ratioStorage==!null) {
+//         const ratioOne = getRatioOneFromStorage()
+//         console.log(ratioOne)
+//         saveRatioOneToStorage(ratioOne)
+//         return ratioOne
+//         } else{
+//         const ratioOne = (elementSum*100)/elementQuantity
+//         console.log(ratioOne)
+//         saveRatioOneToStorage(ratioOne)
+//         return ratioOne}
+//     }
+
 export const dayRatioOne = () =>{
     const data = getVisitedFromStorage()
     const elementQuantity = data.DayOne.length
     const elementSum = sumCheckedOne()
     const ratioOne = (elementSum*100)/elementQuantity
     console.log(ratioOne)
+    saveRatioOneToStorage(ratioOne)
     return ratioOne
     }
 
@@ -258,6 +357,7 @@ export const dayRatioTwo = () =>{
     const elementSum = sumCheckedTwo()
     const ratioTwo = (elementSum*100)/elementQuantity
     console.log(ratioTwo)
+    saveRatioTwoToStorage(ratioTwo)
     return ratioTwo
     }
 
@@ -267,6 +367,7 @@ export const dayRatioThree = () =>{
     const elementSum = sumCheckedThree()
     const ratioThree = (elementSum*100)/elementQuantity
     console.log(ratioThree)
+    saveRatioThreeToStorage(ratioThree)
     return ratioThree
     }
 
@@ -276,6 +377,7 @@ export const dayRatioFour = () =>{
     const elementSum = sumCheckedFour()
     const ratioFour = (elementSum*100)/elementQuantity
     console.log(ratioFour)
+    saveRatioFourToStorage(ratioFour)
     return ratioFour
     }
 
@@ -285,6 +387,7 @@ export const dayRatioFive = () =>{
     const elementSum = sumCheckedFive()
     const ratioFive = (elementSum*100)/elementQuantity
     console.log(ratioFive)
+    saveRatioFiveToStorage(ratioFive)
     return ratioFive
     }
     
@@ -294,6 +397,7 @@ export const dayRatioSix = () =>{
     const elementSum = sumCheckedSix()
     const ratioSix = (elementSum*100)/elementQuantity
     console.log(ratioSix)
+    saveRatioSixToStorage(ratioSix)
     return ratioSix
     }
 

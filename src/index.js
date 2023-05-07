@@ -169,16 +169,23 @@ showBtn.addEventListener('click', () => {
     getVisited(visited)
 });
 
-sumCheckedOne()
-sumCheckedTwo()
-sumCheckedThree()
-sumCheckedFour()
-sumCheckedFive()
-sumCheckedSix()
+sumCheckedOne();
+sumCheckedTwo();
+sumCheckedThree();
+sumCheckedFour();
+sumCheckedFive();
+sumCheckedSix();
 
-dayRatioOne()
-dayRatioTwo()
-dayRatioThree()
-dayRatioFour()
-dayRatioFive()
-dayRatioSix()
+dayRatioOne();
+dayRatioTwo();
+dayRatioThree();
+dayRatioFour();
+dayRatioFive();
+dayRatioSix();
+
+renderShieldOne();
+renderShieldTwo();
+renderShieldThree();
+renderShieldFour();
+renderShieldFive();
+renderShieldSix();

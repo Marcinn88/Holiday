@@ -4,7 +4,17 @@ import { checkWeatherOne, checkWeatherTwo, checkWeatherThree } from "./features/
 import { scrollFunction, scrollFunctionMenu, scrollFunctionMap } from "./features/scrollUp";
 // import { checkElement } from "./features/modal";
 import { initializeApp } from "firebase/app";
-import { visited, getVisited, saveVisitedToStorage, getVisitedFromStorage } from "./features/modal";
+import { sumCheckedOne,
+         sumCheckedTwo,
+         sumCheckedThree,
+         sumCheckedFour,
+         sumCheckedFive,
+         sumCheckedSix,
+         visited,
+         getVisited, 
+         saveVisitedToStorage, 
+         getVisitedFromStorage } from "./features/modal";
+
 const mainModalWrapper = document.querySelector('.main__modal-wrapper')
 const closeBtn = document.querySelector('#closeModal');
 const showBtn = document.querySelector('#showModal')
@@ -140,3 +150,10 @@ showBtn.addEventListener('click', () => {
     mainModalWrapper.classList.remove('is-hidden-modal')
     getVisited(visited)
 });
+
+sumCheckedOne()
+sumCheckedTwo()
+sumCheckedThree()
+sumCheckedFour()
+sumCheckedFive()
+sumCheckedSix()

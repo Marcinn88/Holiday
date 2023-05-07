@@ -164,3 +164,68 @@ export const renderDaySix = (elements) => {
     modalDaySix.insertAdjacentHTML('beforeend', markup);
 }
 
+export const sumCheckedOne = () => {
+    const data = getVisitedFromStorage()
+    const dayData = data.DayOne
+    let sumVisited = 0
+    for (let i = 0; i < dayData.length; i++) {
+        let element = dayData[i].visit;
+        sumVisited += element;
+    }
+    console.log(sumVisited)
+}
+
+export const sumCheckedTwo = () => {
+    const data = getVisitedFromStorage()
+    const dayData = data.DayTwo
+    let sumVisited = 0
+    for (let i = 0; i < dayData.length; i++) {
+        let element = dayData[i].visit;
+        sumVisited += element;
+    }
+    console.log(sumVisited)
+}
+
+export const sumCheckedThree = () => {
+    const data = getVisitedFromStorage()
+    const dayData = data.DayThree
+    let sumVisited = 0
+    for (let i = 0; i < dayData.length; i++) {
+        let element = dayData[i].visit;
+        sumVisited += element;
+    }
+    console.log(sumVisited)
+}
+
+export const sumCheckedFour = () => {
+    const data = getVisitedFromStorage()
+    const dayData = data.DayFour
+    let sumVisited = 0
+    for (let i = 0; i < dayData.length; i++) {
+        let element = dayData[i].visit;
+        sumVisited += element;
+    }
+    console.log(sumVisited)
+}
+
+export const sumCheckedFive = () => {
+    const data = getVisitedFromStorage()
+    const dayData = data.DayFive
+    let sumVisited = 0
+    for (let i = 0; i < dayData.length; i++) {
+        let element = dayData[i].visit;
+        sumVisited += element;
+    }
+    console.log(sumVisited)
+}
+
+export const sumCheckedSix = () => {
+    const data = getVisitedFromStorage()
+    const dayData = data.DaySix
+    let sumVisited = 0
+    for (let i = 0; i < dayData.length; i++) {
+        let element = dayData[i].visit;
+        sumVisited += element;
+    }
+    console.log(sumVisited)
+}

@@ -137,3 +137,20 @@
 
     }
 }
+
+.modal__day-shield{
+    width: 200px;
+    height: 200px;
+    &::after{
+        content: '';
+        background-image: url(./../images/shields/shield-0.png);
+        background-repeat: no-repeat;
+        background-position:left;
+        background-size: 200px;
+        opacity: 1;
+        display: block;
+        width: 200px;
+        height: 200px;
+
+    }
+}

@@ -4,12 +4,12 @@ import { checkWeatherOne, checkWeatherTwo, checkWeatherThree } from "./features/
 import { scrollFunction, scrollFunctionMenu, scrollFunctionMap } from "./features/scrollUp";
 // import { checkElement } from "./features/modal";
 import { initializeApp } from "firebase/app";
-
+import { visited, getVisited } from "./features/modal";
 const mainModalWrapper = document.querySelector('.main__modal-wrapper')
 const closeBtn = document.querySelector('#closeModal');
 const showBtn = document.querySelector('#showModal')
 closeBtn.addEventListener('click', () => {mainModalWrapper.classList.add('is-hidden-modal')});
-showBtn.addEventListener('click', () => {mainModalWrapper.classList.remove('is-hidden-modal')});
+// showBtn.addEventListener('click', () => {mainModalWrapper.classList.remove('is-hidden-modal')});
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -27,7 +27,12 @@ const app = initializeApp(firebaseConfig);
 const cityOne = 'Agia Pelagia'
 const cityTwo = 'Heraklion'
 const cityThree = 'Chania'
-
+const listOne = document.querySelector('.modal__list-One');
+const listTwo = document.querySelector('.modal__list-Two');
+const listThree = document.querySelector('.modal__list-Three');
+const listFour = document.querySelector('.modal__list-Four');
+const listFive = document.querySelector('.modal__list-Five');
+const listSix = document.querySelector('.modal__list-Six');
 
 
 countdown()
@@ -76,21 +81,6 @@ const lightboxSix = new SimpleLightbox(".gallerySix a", {
 });
 
 
-const visited ={
-    1:{visited:1},
-    2:{visited:3},
-    3:{visited:0},
-    4:{visited:2}
-}
-
-
-const listOne = document.querySelector('.modal__list-One');
-const listTwo = document.querySelector('.modal__list-Two');
-const listThree = document.querySelector('.modal__list-Three');
-const listFour = document.querySelector('.modal__list-Four');
-const listFive = document.querySelector('.modal__list-Five');
-const listSix = document.querySelector('.modal__list-Six');
-
 listOne.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
 listTwo.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
 listThree.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
@@ -98,3 +88,9 @@ listFour.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {ev.
 listFive.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
 listSix.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
 
+
+showBtn.addEventListener('click', () => {
+    mainModalWrapper.classList.remove('is-hidden-modal')
+    getVisited(visited)
+    console.log('modal sie pokazal')
+});

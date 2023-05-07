@@ -260,7 +260,6 @@ export const sumCheckedOne = () => {
         let element = dayData[i].visit;
         sumVisitedOne += element;
     }
-    console.log(sumVisitedOne)
     return sumVisitedOne
 }
 
@@ -272,7 +271,6 @@ export const sumCheckedTwo = () => {
         let element = dayData[i].visit;
         sumVisitedTwo += element;
     }
-    console.log(sumVisitedTwo)
     return sumVisitedTwo
 }
 
@@ -284,7 +282,6 @@ export const sumCheckedThree = () => {
         let element = dayData[i].visit;
         sumVisitedThree += element;
     }
-    console.log(sumVisitedThree)
     return sumVisitedThree
 }
 
@@ -296,7 +293,6 @@ export const sumCheckedFour = () => {
         let element = dayData[i].visit;
         sumVisitedFour += element;
     }
-    console.log(sumVisitedFour)
     return sumVisitedFour
 }
 
@@ -308,7 +304,6 @@ export const sumCheckedFive = () => {
         let element = dayData[i].visit;
         sumVisitedFive += element;
     }
-    console.log(sumVisitedFive)
     return sumVisitedFive
 }
 
@@ -320,7 +315,6 @@ export const sumCheckedSix = () => {
         let element = dayData[i].visit;
         sumVisitedSix += element;
     }
-    console.log(sumVisitedSix)
     return sumVisitedSix
 }
 
@@ -346,7 +340,6 @@ export const dayRatioOne = () =>{
     const elementQuantity = data.DayOne.length
     const elementSum = sumCheckedOne()
     const ratioOne = (elementSum*100)/elementQuantity
-    console.log(ratioOne)
     saveRatioOneToStorage(ratioOne)
     return ratioOne
     }
@@ -356,7 +349,6 @@ export const dayRatioTwo = () =>{
     const elementQuantity = data.DayTwo.length
     const elementSum = sumCheckedTwo()
     const ratioTwo = (elementSum*100)/elementQuantity
-    console.log(ratioTwo)
     saveRatioTwoToStorage(ratioTwo)
     return ratioTwo
     }
@@ -366,7 +358,6 @@ export const dayRatioThree = () =>{
     const elementQuantity = data.DayThree.length
     const elementSum = sumCheckedThree()
     const ratioThree = (elementSum*100)/elementQuantity
-    console.log(ratioThree)
     saveRatioThreeToStorage(ratioThree)
     return ratioThree
     }
@@ -376,7 +367,6 @@ export const dayRatioFour = () =>{
     const elementQuantity = data.DayFour.length
     const elementSum = sumCheckedFour()
     const ratioFour = (elementSum*100)/elementQuantity
-    console.log(ratioFour)
     saveRatioFourToStorage(ratioFour)
     return ratioFour
     }
@@ -386,7 +376,6 @@ export const dayRatioFive = () =>{
     const elementQuantity = data.DayFive.length
     const elementSum = sumCheckedFive()
     const ratioFive = (elementSum*100)/elementQuantity
-    console.log(ratioFive)
     saveRatioFiveToStorage(ratioFive)
     return ratioFive
     }
@@ -396,7 +385,6 @@ export const dayRatioSix = () =>{
     const elementQuantity = data.DaySix.length
     const elementSum = sumCheckedSix()
     const ratioSix = (elementSum*100)/elementQuantity
-    console.log(ratioSix)
     saveRatioSixToStorage(ratioSix)
     return ratioSix
     }
@@ -408,29 +396,21 @@ if (shieldRatio<25) {
     modalShieldOne.classList.remove('grey-shield25')
     modalShieldOne.classList.remove('grey-shield75')
     modalShieldOne.classList.remove('gold-One')
-    console.log('mniej niz 25')
-    console.log(shieldRatio)
 } else if (shieldRatio>=25 && shieldRatio <75) {
     modalShieldOne.classList.remove('grey-shield')
     modalShieldOne.classList.add('grey-shield25')
     modalShieldOne.classList.remove('grey-shield75')
     modalShieldOne.classList.remove('gold-One')
-    console.log('wiecej niz 25 mniej niz 75')
-    console.log(shieldRatio)
 } else if (shieldRatio>=75 && shieldRatio <100) {
     modalShieldOne.classList.remove('grey-shield')
     modalShieldOne.classList.remove('grey-shield25')
     modalShieldOne.classList.add('grey-shield75')
     modalShieldOne.classList.remove('gold-One')
-    console.log('wiecej niz 75 mniej niz 100')
-    console.log(shieldRatio)
 } else{
     modalShieldOne.classList.remove('grey-shield')
     modalShieldOne.classList.remove('grey-shield25')
     modalShieldOne.classList.remove('grey-shield75')
     modalShieldOne.classList.add('gold-One')    
-    console.log('max')
-    console.log(shieldRatio)
 }
 }
 
@@ -441,29 +421,21 @@ export const renderShieldTwo = () => {
         modalShieldTwo.classList.remove('grey-shield25')
         modalShieldTwo.classList.remove('grey-shield75')
         modalShieldTwo.classList.remove('gold-Two')
-        console.log('mniej niz 25')
-        console.log(shieldRatio)
     } else if (shieldRatio>=25 && shieldRatio <75) {
         modalShieldTwo.classList.remove('grey-shield')
         modalShieldTwo.classList.add('grey-shield25')
         modalShieldTwo.classList.remove('grey-shield75')
         modalShieldTwo.classList.remove('gold-Two')
-        console.log('wiecej niz 25 mniej niz 75')
-        console.log(shieldRatio)
     } else if (shieldRatio>=75 && shieldRatio <100) {
         modalShieldTwo.classList.remove('grey-shield')
         modalShieldTwo.classList.remove('grey-shield25')
         modalShieldTwo.classList.add('grey-shield75')
         modalShieldTwo.classList.remove('gold-Two')
-        console.log('wiecej niz 75 mniej niz 100')
-        console.log(shieldRatio)
     } else{
         modalShieldTwo.classList.remove('grey-shield')
         modalShieldTwo.classList.remove('grey-shield25')
         modalShieldTwo.classList.remove('grey-shield75')
         modalShieldTwo.classList.add('gold-Two')    
-        console.log('max')
-        console.log(shieldRatio)
     }
     }
 
@@ -474,29 +446,21 @@ export const renderShieldThree = () => {
         modalShieldThree.classList.remove('grey-shield25')
         modalShieldThree.classList.remove('grey-shield75')
         modalShieldThree.classList.remove('gold-Three')
-        console.log('mniej niz 25')
-        console.log(shieldRatio)
     } else if (shieldRatio>=25 && shieldRatio <75) {
         modalShieldThree.classList.remove('grey-shield')
         modalShieldThree.classList.add('grey-shield25')
         modalShieldThree.classList.remove('grey-shield75')
         modalShieldThree.classList.remove('gold-Three')
-        console.log('wiecej niz 25 mniej niz 75')
-        console.log(shieldRatio)
     } else if (shieldRatio>=75 && shieldRatio <100) {
         modalShieldThree.classList.remove('grey-shield')
         modalShieldThree.classList.remove('grey-shield25')
         modalShieldThree.classList.add('grey-shield75')
         modalShieldThree.classList.remove('gold-Three')
-        console.log('wiecej niz 75 mniej niz 100')
-        console.log(shieldRatio)
     } else{
         modalShieldThree.classList.remove('grey-shield')
         modalShieldThree.classList.remove('grey-shield25')
         modalShieldThree.classList.remove('grey-shield75')
         modalShieldThree.classList.add('gold-Three')    
-        console.log('max')
-        console.log(shieldRatio)
     }
     }
 
@@ -507,29 +471,21 @@ export const renderShieldFour = () => {
         modalShieldFour.classList.remove('grey-shield25')
         modalShieldFour.classList.remove('grey-shield75')
         modalShieldFour.classList.remove('gold-Four')
-        console.log('mniej niz 25')
-        console.log(shieldRatio)
     } else if (shieldRatio>=25 && shieldRatio <75) {
         modalShieldFour.classList.remove('grey-shield')
         modalShieldFour.classList.add('grey-shield25')
         modalShieldFour.classList.remove('grey-shield75')
         modalShieldFour.classList.remove('gold-Four')
-        console.log('wiecej niz 25 mniej niz 75')
-        console.log(shieldRatio)
     } else if (shieldRatio>=75 && shieldRatio <100) {
         modalShieldFour.classList.remove('grey-shield')
         modalShieldFour.classList.remove('grey-shield25')
         modalShieldFour.classList.add('grey-shield75')
         modalShieldFour.classList.remove('gold-Four')
-        console.log('wiecej niz 75 mniej niz 100')
-        console.log(shieldRatio)
     } else{
         modalShieldFour.classList.remove('grey-shield')
         modalShieldFour.classList.remove('grey-shield25')
         modalShieldFour.classList.remove('grey-shield75')
         modalShieldFour.classList.add('gold-Four')    
-        console.log('max')
-        console.log(shieldRatio)
     }
     }
 
@@ -540,29 +496,21 @@ export const renderShieldFive = () => {
         modalShieldFive.classList.remove('grey-shield25')
         modalShieldFive.classList.remove('grey-shield75')
         modalShieldFive.classList.remove('gold-Five')
-        console.log('mniej niz 25')
-        console.log(shieldRatio)
     } else if (shieldRatio>=25 && shieldRatio <75) {
         modalShieldFive.classList.remove('grey-shield')
         modalShieldFive.classList.add('grey-shield25')
         modalShieldFive.classList.remove('grey-shield75')
         modalShieldFive.classList.remove('gold-Five')
-        console.log('wiecej niz 25 mniej niz 75')
-        console.log(shieldRatio)
     } else if (shieldRatio>=75 && shieldRatio <100) {
         modalShieldFive.classList.remove('grey-shield')
         modalShieldFive.classList.remove('grey-shield25')
         modalShieldFive.classList.add('grey-shield75')
         modalShieldFive.classList.remove('gold-Five')
-        console.log('wiecej niz 75 mniej niz 100')
-        console.log(shieldRatio)
     } else{
         modalShieldFive.classList.remove('grey-shield')
         modalShieldFive.classList.remove('grey-shield25')
         modalShieldFive.classList.remove('grey-shield75')
         modalShieldFive.classList.add('gold-Five')    
-        console.log('max')
-        console.log(shieldRatio)
     }
     }
 
@@ -573,28 +521,20 @@ export const renderShieldSix = () => {
         modalShieldSix.classList.remove('grey-shield25')
         modalShieldSix.classList.remove('grey-shield75')
         modalShieldSix.classList.remove('gold-Six')
-        console.log('mniej niz 25')
-        console.log(shieldRatio)
     } else if (shieldRatio>=25 && shieldRatio <75) {
         modalShieldSix.classList.remove('grey-shield')
         modalShieldSix.classList.add('grey-shield25')
         modalShieldSix.classList.remove('grey-shield75')
         modalShieldSix.classList.remove('gold-Six')
-        console.log('wiecej niz 25 mniej niz 75')
-        console.log(shieldRatio)
     } else if (shieldRatio>=75 && shieldRatio <100) {
         modalShieldSix.classList.remove('grey-shield')
         modalShieldSix.classList.remove('grey-shield25')
         modalShieldSix.classList.add('grey-shield75')
         modalShieldSix.classList.remove('gold-Six')
-        console.log('wiecej niz 75 mniej niz 100')
-        console.log(shieldRatio)
     } else{
         modalShieldSix.classList.remove('grey-shield')
         modalShieldSix.classList.remove('grey-shield25')
         modalShieldSix.classList.remove('grey-shield75')
         modalShieldSix.classList.add('gold-Six')    
-        console.log('max')
-        console.log(shieldRatio)
     }
     }

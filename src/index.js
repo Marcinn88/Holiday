@@ -33,6 +33,10 @@ const showBtn = document.querySelector('#showModal')
 closeBtn.addEventListener('click', () => {mainModalWrapper.classList.add('is-hidden-modal')});
 // showBtn.addEventListener('click', () => {mainModalWrapper.classList.remove('is-hidden-modal')});
 
+
+
+const closeByBackdrop = document.querySelector('#modal__backdrop')
+closeByBackdrop.addEventListener('click', ()=>{mainModalWrapper.classList.add('is-hidden-modal')})
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBl_36kEp7ADRTekMzpH-kyjSzYqM86yUQ",

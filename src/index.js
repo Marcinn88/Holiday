@@ -20,6 +20,9 @@ body.addEventListener('keydown', (event) => {if (event.key == 'Escape'){mainModa
 closeBtn.addEventListener('click', () => {mainModalWrapper.classList.add('is-hidden-modal')});
 closeByBackdrop.addEventListener('click', ()=>{mainModalWrapper.classList.add('is-hidden-modal')})
 
+const closeBtnX = document.querySelector('.close-modal-button')
+closeBtnX.addEventListener('click', () => {mainModalWrapper.classList.add('is-hidden-modal')});
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBl_36kEp7ADRTekMzpH-kyjSzYqM86yUQ",

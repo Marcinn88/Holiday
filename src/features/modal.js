@@ -1,32 +1,16 @@
-// export const mainModalWrapper = document.querySelector('.main__modal-wrapper')
-// export const closeBtn = document.querySelector('#closeModal');
-// export const showBtn = document.querySelector('#showModal')
-
-// closeBtn.addEventListener('click', closeFunction =()=> {
-//     mainModalWrapper.classList.add('is-hidden-modal');
-// });
-
-
-
-// showBtn.addEventListener('click', openFunction = () => {
-//     mainModalWrapper.classList.remove('is-hidden-modal');
-// })
-
-
-// Add a "checked" symbol when clicking on a list item
-// const listOne = document.querySelector('.modal__list-One');
-// const listTwo = document.querySelector('.modal__list-Two');
-// const listThree = document.querySelector('.modal__list-Three');
-// const listFour = document.querySelector('.modal__list-Four');
-// const listFive = document.querySelector('.modal__list-Five');
-// const listSix = document.querySelector('.modal__list-Six');
-
-// listOne.addEventListener('click', checkElement = (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
-// listTwo.addEventListener('click', checkElement = (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
-// listThree.addEventListener('click', checkElement = (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
-// listFour.addEventListener('click', checkElement = (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
-// listFive.addEventListener('click', checkElement = (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
-// listSix.addEventListener('click', checkElement = (ev) => {if (ev.target.tagName === 'LI') {ev.target.classList.toggle('checked')}}, false);
+export const mainModalWrapper = document.querySelector('.main__modal-wrapper')
+export const closeBtn = document.querySelector('#closeModal');
+export const showBtn = document.querySelector('#showModal');
+export const closeByBackdrop = document.querySelector('#modal__backdrop');
+export const cityOne = 'Agia Pelagia'
+export const cityTwo = 'Heraklion'
+export const cityThree = 'Chania'
+export const listOne = document.querySelector('.modal__list-One');
+export const listTwo = document.querySelector('.modal__list-Two');
+export const listThree = document.querySelector('.modal__list-Three');
+export const listFour = document.querySelector('.modal__list-Four');
+export const listFive = document.querySelector('.modal__list-Five');
+export const listSix = document.querySelector('.modal__list-Six');
 
 
 export const visited =
@@ -318,23 +302,6 @@ export const sumCheckedSix = () => {
     return sumVisitedSix
 }
 
-// export const dayRatioOne = () =>{
-//     const data = getVisitedFromStorage()
-//     const elementQuantity = data.DayOne.length
-//     const elementSum = sumCheckedOne()
-//     const ratioStorage = getRatioOneFromStorage()
-//     if (ratioStorage==!null) {
-//         const ratioOne = getRatioOneFromStorage()
-//         console.log(ratioOne)
-//         saveRatioOneToStorage(ratioOne)
-//         return ratioOne
-//         } else{
-//         const ratioOne = (elementSum*100)/elementQuantity
-//         console.log(ratioOne)
-//         saveRatioOneToStorage(ratioOne)
-//         return ratioOne}
-//     }
-
 export const dayRatioOne = () =>{
     const data = getVisitedFromStorage()
     const elementQuantity = data.DayOne.length
@@ -538,3 +505,21 @@ export const renderShieldSix = () => {
         modalShieldSix.classList.add('gold-Six')    
     }
     }
+
+export const goldenBtn = () => {
+    const button = document.querySelector('.trophyBtn')
+    const ratioOne = dayRatioOne();
+    const ratioTwo = dayRatioTwo();
+    const ratioThree = dayRatioThree();
+    const ratioFour = dayRatioFour();
+    const ratioFive = dayRatioFive();
+    const ratioSix = dayRatioSix();
+    const sumRatio = ratioOne+ratioTwo+ratioThree+ratioFour+ratioFive+ratioSix;
+    if (sumRatio == 600){
+        button.classList.add('trophyBtn-gold');
+        button.classList.remove('trophyBtn-grey');
+    } else {
+        button.classList.add('trophyBtn-grey');
+        button.classList.remove('trophyBtn-gold');
+    }
+}

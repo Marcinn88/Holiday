@@ -4,39 +4,22 @@ import { checkWeatherOne, checkWeatherTwo, checkWeatherThree } from "./features/
 import { scrollFunction, scrollFunctionMenu, scrollFunctionMap } from "./features/scrollUp";
 // import { checkElement } from "./features/modal";
 import { initializeApp } from "firebase/app";
-import { sumCheckedOne,
-         sumCheckedTwo,
-         sumCheckedThree,
-         sumCheckedFour,
-         sumCheckedFive,
-         sumCheckedSix,
-         visited,
-         getVisited, 
-         saveVisitedToStorage, 
-         getVisitedFromStorage,
-         dayRatioOne,
-         dayRatioTwo,
-         dayRatioThree,
-         dayRatioFour,
-         dayRatioFive,
-         dayRatioSix,
-         renderShieldOne,
-         renderShieldTwo,
-         renderShieldThree,
-         renderShieldFour,
-         renderShieldFive,
-         renderShieldSix, } from "./features/modal";
-
-const mainModalWrapper = document.querySelector('.main__modal-wrapper')
-const closeBtn = document.querySelector('#closeModal');
-const showBtn = document.querySelector('#showModal')
-closeBtn.addEventListener('click', () => {mainModalWrapper.classList.add('is-hidden-modal')});
+import { sumCheckedOne, sumCheckedTwo, sumCheckedThree, sumCheckedFour, sumCheckedFive, sumCheckedSix,
+         visited, getVisited, 
+         saveVisitedToStorage, getVisitedFromStorage,
+         dayRatioOne, dayRatioTwo, dayRatioThree, dayRatioFour, dayRatioFive, dayRatioSix,
+         renderShieldOne, renderShieldTwo, renderShieldThree, renderShieldFour, renderShieldFive, renderShieldSix,
+         mainModalWrapper,
+         closeBtn, showBtn, closeByBackdrop, goldenBtn,
+         cityOne, cityTwo,cityThree,
+         listOne, listTwo, listThree, listFour, listFive, listSix } from "./features/modal";
 
 const body = document.querySelector('body')
 body.addEventListener('keydown', (event) => {if (event.key == 'Escape'){mainModalWrapper.classList.add('is-hidden-modal')}});
-
-const closeByBackdrop = document.querySelector('#modal__backdrop')
+        
+closeBtn.addEventListener('click', () => {mainModalWrapper.classList.add('is-hidden-modal')});
 closeByBackdrop.addEventListener('click', ()=>{mainModalWrapper.classList.add('is-hidden-modal')})
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBl_36kEp7ADRTekMzpH-kyjSzYqM86yUQ",
@@ -50,15 +33,15 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const cityOne = 'Agia Pelagia'
-const cityTwo = 'Heraklion'
-const cityThree = 'Chania'
-const listOne = document.querySelector('.modal__list-One');
-const listTwo = document.querySelector('.modal__list-Two');
-const listThree = document.querySelector('.modal__list-Three');
-const listFour = document.querySelector('.modal__list-Four');
-const listFive = document.querySelector('.modal__list-Five');
-const listSix = document.querySelector('.modal__list-Six');
+// const cityOne = 'Agia Pelagia'
+// const cityTwo = 'Heraklion'
+// const cityThree = 'Chania'
+// const listOne = document.querySelector('.modal__list-One');
+// const listTwo = document.querySelector('.modal__list-Two');
+// const listThree = document.querySelector('.modal__list-Three');
+// const listFour = document.querySelector('.modal__list-Four');
+// const listFive = document.querySelector('.modal__list-Five');
+// const listSix = document.querySelector('.modal__list-Six');
 
 
 countdown()
@@ -115,6 +98,7 @@ listOne.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
     else{ place.DayOne[id].visit=0 }
     saveVisitedToStorage(place)
     renderShieldOne()
+    goldenBtn()
 }}, false);
 
 
@@ -126,6 +110,7 @@ listTwo.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
     else{ place.DayTwo[id].visit=0 }
     saveVisitedToStorage(place)
     renderShieldTwo()
+    goldenBtn()
 }}, false);
 
 listThree.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
@@ -136,6 +121,7 @@ listThree.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
     else{ place.DayThree[id].visit=0 }
     saveVisitedToStorage(place)
     renderShieldThree()
+    goldenBtn()
 }}, false);
 
 listFour.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
@@ -146,6 +132,7 @@ listFour.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
     else{ place.DayFour[id].visit=0 }
     saveVisitedToStorage(place)
     renderShieldFour()
+    goldenBtn()
 }}, false);
 
 listFive.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
@@ -156,6 +143,7 @@ listFive.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
     else{ place.DayFive[id].visit=0 }
     saveVisitedToStorage(place)
     renderShieldFive()
+    goldenBtn()
 }}, false);
     
 listSix.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
@@ -166,12 +154,10 @@ listSix.addEventListener('click', (ev) => {if (ev.target.tagName === 'LI') {
     else{ place.DaySix[id].visit=0 }
     saveVisitedToStorage(place)
     renderShieldSix()
+    goldenBtn()
 }}, false);
 
-showBtn.addEventListener('click', () => {
-    mainModalWrapper.classList.remove('is-hidden-modal')
-    getVisited(visited)
-});
+showBtn.addEventListener('click', () => {mainModalWrapper.classList.remove('is-hidden-modal'); getVisited(visited)});
 
 sumCheckedOne();
 sumCheckedTwo();
@@ -193,3 +179,5 @@ renderShieldThree();
 renderShieldFour();
 renderShieldFive();
 renderShieldSix();
+
+goldenBtn();

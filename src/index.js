@@ -31,9 +31,9 @@ const mainModalWrapper = document.querySelector('.main__modal-wrapper')
 const closeBtn = document.querySelector('#closeModal');
 const showBtn = document.querySelector('#showModal')
 closeBtn.addEventListener('click', () => {mainModalWrapper.classList.add('is-hidden-modal')});
-// showBtn.addEventListener('click', () => {mainModalWrapper.classList.remove('is-hidden-modal')});
 
-
+const body = document.querySelector('body')
+body.addEventListener('keydown', (event) => {if (event.key == 'Escape'){mainModalWrapper.classList.add('is-hidden-modal')}});
 
 const closeByBackdrop = document.querySelector('#modal__backdrop')
 closeByBackdrop.addEventListener('click', ()=>{mainModalWrapper.classList.add('is-hidden-modal')})

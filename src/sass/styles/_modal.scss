@@ -3,7 +3,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 .close-modal-button{
-    z-index: 1001;
+    z-index: 111;
     position: fixed;
     top:10%;
     right:10%;
@@ -40,7 +40,7 @@
     overflow-x: overlay;
     top: 10%;
     left: 10%;
-    z-index: 101;
+    z-index: 104;
     background-color: #fff;
     border-radius: 20px;
     padding: 20px;
@@ -82,7 +82,7 @@
     background-color:white;
     border: 1px solid rgb(182, 182, 182);
     border-radius: 10px;
-    z-index: 102;
+    z-index: 105;
     padding: 10px 35px;
     font-size: 15px;
     &:hover{
@@ -109,7 +109,10 @@
     justify-content: center;
 }
 .modal__day-list{
-    background-color: rgb(255, 255, 255);
+    // background-color: rgb(241, 241, 241);
+    background-image: url(./../images/sand.jpg);
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -124,11 +127,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 20px;
     border: 1px solid rgb(230, 230, 230);
-    box-shadow: 0px 3px 3px 0px rgba(160, 160, 160, 0.2),
-    0px 3px 3px 0px rgba(173, 173, 173, 0.14), 0px 2px 1px -1px rgba(175, 175, 175, 0.12);
+    // box-shadow: 0px 3px 3px 0px rgba(160, 160, 160, 0.2),
+    // 0px 3px 3px 0px rgba(173, 173, 173, 0.14), 0px 2px 1px -1px rgba(175, 175, 175, 0.12);
+    -webkit-box-shadow: 3px 7px 23px -4px rgb(58, 58, 58);
+    -moz-box-shadow: 3px 7px 23px -4px rgb(63, 63, 63);
+    box-shadow: 3px 7px 23px -4px rgb(56, 56, 56);
 }
 .modal__list-title{
     font-size: 18px;
@@ -295,4 +301,132 @@
             width: 200px;
             height: 200px;
         }
+}
+
+.modal__ico-palms{
+    display: flex;
+    position: fixed;
+    top:10%;
+    left:10%;
+    width: 80%;
+    height: 80%;
+    pointer-events: none;
+    z-index: 103;
+    // opacity: 0.3;
+    &::after{
+        content: '';
+        background-image: url(./../images/palm-svg.svg);
+        background-repeat: no-repeat;
+        background-size: 150px;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top:-13%;
+        left:-90px;
+        transform: rotate(340deg);
+    }
+    &::before{
+        content: '';
+        background-image: url(./../images/palm-svg.svg);
+        background-repeat: no-repeat;
+        background-size: 150px;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top:-13%;
+        right:-90px;
+        transform: rotate(20deg)scaleX(-1);
+    }
+}
+.modal__ico-sun{
+    display: flex;
+    position: fixed;
+    top:10%;
+    left:10%;
+    width: 80%;
+    height: 80%;
+    pointer-events: none;
+    z-index: 102;
+    &::after{
+        content: '';
+        background-image: url(./../images/sun-svg.svg);
+        background-repeat: no-repeat;
+        background-size: 100px;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top:-10%;
+        left:50%;      
+        animation: sun-rotate 30s infinite;
+    }
+}
+
+@keyframes sun-rotate {
+    0% {
+        transform: rotate(-45deg);
+	}
+	50% {
+        transform: rotate(40deg);
+	}
+    100% {
+        transform: rotate(-45deg);
+	}
+
+}
+
+.modal__ico-waves{
+        display: flex;
+        position: fixed;
+        top:10%;
+        left:10%;
+        width: 80%;
+        height: 80%;
+        pointer-events: none;
+        // background-color: green;
+        z-index: 114;
+        // &::after{
+        //     content: '';
+        //     background-image: url(./../images/sun-svg.svg);
+        //     background-repeat: no-repeat;
+        //     background-size: 50px;
+        //     width: 50px;
+        //     height: 50px;
+        //     position: absolute;
+        //     top:-10%;
+        //     left:50%;
+        // }
+  
+}
+.modal__ico-ball{
+    display: flex;
+    position: fixed;
+    bottom:7%;
+    left:0;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    // background-color: green;
+    z-index: 115;
+    &::after{
+        content: '';
+        background-image: url(./../images/beach-ball.svg);
+        background-repeat: no-repeat;
+        background-size: 50px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    animation: ball-roll 10s infinite linear;
+}
+@keyframes ball-roll {
+    from {
+        transform: rotate(0deg);
+        left:-100px;
+	}
+	to {
+        transform: rotate(360deg);
+        left:100%
+	}
 }

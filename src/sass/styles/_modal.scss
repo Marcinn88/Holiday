@@ -135,7 +135,7 @@
         position: absolute;
         top:7px;
         left:30px;
-        transition: all 2s;
+        transition: all 1.3s;
         transform: translateY(130%);
     }
     &:hover{
@@ -143,9 +143,10 @@
         &::after{
             transform: translateY(0) ;
         }
-        // animation: X-round 2s linear infinite;
+        border-color:rgb(47, 189, 255) ;
+        background-color: aliceblue;
+        transform: scale(1.01);
     }
-
 }
 // {
 //     bottom:100px;
